@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Go to cdnjs, search for font awesome, copy link. Font Awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <!-- Put the utility css link first -->
+    <link rel="stylesheet" href="css/utilities.css" />
+    <!-- Link for style.css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Post One</title>
+  </head>
+  <body id="home">
+    <!-- the navbar and the showcase will be within the header -->
+    <header class="hero blog">
+      <div id="navbar" class="navbar top">
+        <h1 class="logo">
+          <span class="text-primary">
+            <i class="fas fa-book-open"></i> Edge</span
+          >Ledger
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#cases">Cases</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="content">
+        <h1>Blog</h1>
+      </div>
+    </header>
+    <!-- Main section -->
+    <main>
+      <section class="post">
+        <h2>Blog Post One</h2>
+        <p class="meta">
+          <i class="fas fa-user"></i> Posted by <strong>Jane Doe</strong> |
+          September 05 2020
+        </p>
+        <img src="./images/blog/blog1.jpg" alt="">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+          ducimus nulla dolores quisquam, ullam explicabo doloribus? Ab quod
+          saepe veniam?
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
+          atque corrupti quo, nulla iste non repellendus sed ipsa corporis
+          aspernatur illum sapiente quaerat sunt ratione illo delectus odio
+          fugit similique accusamus eligendi! Aspernatur, nisi. Autem facere at
+          nisi inventore accusantium, impedit eaque voluptas odio atque sint,
+          suscipit unde quibusdam quaerat reprehenderit delectus non aspernatur
+          deserunt, nulla voluptatum odit. Perferendis, mollitia?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem nam
+          amet et repudiandae officia recusandae exercitationem facilis minima
+          est. Dolores deserunt porro, perferendis voluptate modi laboriosam
+          aspernatur tempora corporis architecto iste ad vel, enim inventore
+          repellat laudantium doloribus qui sequi eveniet blanditiis quos illum
+          ipsam repellendus fugit placeat! Voluptatum, maxime.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p>Copyright &copy; 2019 - EdgeLedger</p>
+    </footer>
+
+    <script>
+         const navbar = document.getElementById("navbar");
+      const scrolled = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0)";
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          scrolled = false;
+        }
+      };
+    </script>
+  </body>
+</html>
